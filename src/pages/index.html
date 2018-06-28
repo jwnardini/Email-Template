@@ -1,3 +1,11 @@
+<container>
+<p class="text-center">See src/pages/index.html or <a href="https://github.com/jwnardini/Email-Template/blob/master/src/pages/index.html" target="_blank">github repo</a> for entire markup</p>
+</container>
+
+<wrapper class="header">
+<p class="note">This is a wrapper with the class "header", any wrapper with this class will take up the full window width, uncontained<br>Below this header wrapper is a spacer with a size of "16", meaning a 16 pixel gap</p>
+</wrapper>
+<spacer size="16"></spacer>
 <wrapper class="header">
   <container>
     <row class="collapse">
@@ -5,7 +13,7 @@
         <img src="http://placehold.it/200x50/663399">
       </columns>
       <columns small="6">
-        <p class="text-right">BASIC</p>
+        <p class="text-right">BASIC EXAMPLE</p>
       </columns>
     </row>
   </container>
@@ -18,10 +26,18 @@
   <row>
     <columns small="12">
       
-      <h1>Hi, Susan Calvin</h1>
-      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, iste, amet consequatur a veniam.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut optio nulla et, fugiat. Maiores accusantium nostrum asperiores provident, quam modi ex inventore dolores id aspernatur architecto odio minima perferendis, explicabo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima quos quasi itaque beatae natus fugit provident delectus, magnam laudantium odio corrupti sit quam. Optio aut ut repudiandae velit distinctio asperiores?</p>
+      <h1 class="note">This email has 12 columns!</h1>
+      <p class="lead note">This section takes up the entire width of the email because it has a width of 12 columns, with the attribute small="12", no large attribute is necessary</p>
+      <p>Quick Styleguide:</p>
+      <h1>Header 1</h1>
+      <h2>Header 2</h2>
+      <h3>Header 3</h3>
+      <h4>Header 4</h4>
+      <h5>Header 5</h5>
+      <p>Paragraph</p>
+      <a>Anchor tag</a>
       <callout class="primary">
+        <p class="note">This is a "callout" tag, which provides a border and background color<p>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit repellendus natus, sint ea optio dignissimos asperiores inventore a molestiae dolorum placeat repellat excepturi mollitia ducimus unde doloremque ad, alias eos!</p>
       </callout>
     </columns>
@@ -33,12 +49,16 @@
     <row>
       <columns large="6">
         <h5>Connect With Us:</h5>
+        <p class="note">This column has a size of 6, or half-width (large="6")</p>
+        <p class="note">It will be full width on mobile, since no small attribute is applied</p>
         <button class="facebook expand" href="http://zurb.com">Facebook</button>
         <button class="twitter expand" href="http://zurb.com">Twitter</button>
         <button class="google expand" href="http://zurb.com">Google+</button>
       </columns>
       <columns large="6">
         <h5>Contact Info:</h5>
+        <p class="note">This column has a size of 6, or half-width (large="6")</p>
+        <p class="note">It will be full width on mobile, since no small attribute is applied</p>
         <p>Phone: 408-341-0600</p>
         <p>Email: <a href="mailto:foundation@zurb.com">foundation@zurb.com</a></p>
       </columns>
@@ -56,14 +76,18 @@
   </row>
 </container>
 
-<spacer size="16"></spacer>
+<container>
+  <p class="text-center note">You can make a simple colored spacer by using border-top or border-bottom CSS attribute<br>The following section has <strong>border-top: 8px solid #663399;</strong></p>
+</container>
 
+<spacer size="16"></spacer>
 <container class="body-drip">
 
   <spacer size="16"></spacer>
 
   <center>
     <img src="http://placehold.it/120/663399" alt="">
+    <p class="text-center note">This image is wrapped in a center tag<br>Speaking of which, this text is a p tag with the class <strong>"text-center"</strong><br>(Same with all centered text, just add the class!)</p>
   </center>
 
   <spacer size="16"></spacer>
@@ -71,11 +95,13 @@
   <row>
     <columns>
       <h4 class="text-center">Responsive Emails</h4>
-      <p class="text-center">15 sections | 567 Min</p>
+
+      <p class="text-center note">Below are two simple "hr" tags</br>The second one has a class <strong>"tiny-hr"</strong> and a width set in css <br><strong>.tiny-hr {width: 50px;}</strong></p>
     </columns>
   </row>
 
   <hr/>
+  <hr class="tiny-hr">
 
   <row>
     <columns>
@@ -92,12 +118,14 @@
       <p class="text-center">@copywrite nobody<br/>
       <a href="#">hello@nocopywrite.com</a> | <a href="#">Manage Email Notifications</a> | <a href="#">Unsubscribe</a></p>
       <center>
+            <p class="note text-center">Easy way to center and space images - wrap all in "menu" tag and each item in "item" tag! Useful for social icons</p>
         <menu>
-          <item><img src="http://placehold.it/25/663399" alt=""></item>
-          <item><img src="http://placehold.it/25/663399" alt=""></item>
-          <item><img src="http://placehold.it/25/663399" alt=""></item>
-          <item><img src="http://placehold.it/25/663399" alt=""></item>
-          <item><img src="http://placehold.it/25/663399" alt=""></item>
+          <item><a href="http://www.facebook.com" target="_blank"><img src="../../assets/img/facebook.jpg" alt=""></a></item>
+          <item><a href="http://www.twitter.com" target="_blank"><img src="../../assets/img/twitter.jpg" alt=""></a></item>
+          <item><a href="http://www.pinterest.com" target="_blank"><img src="../../assets/img/pinterest.jpg" alt=""></a></item>
+          <item><a href="http://www.youtube.com" target="_blank"><img src="../../assets/img/youtube.jpg" alt=""></a></item>
+          <item><a href="http://www.instagram.com" target="_blank"><img src="../../assets/img/instagram.jpg" alt=""></a></item>
+          <item><a href="mailto:jon.nardini@agencychief.com" target="_blank"><img src="../../assets/img/email.jpg" alt=""></a></item>
         </menu>
       </center>
     </columns>
@@ -126,11 +154,11 @@
 
   <row>
     <columns small="12">
-      <h1>Hi, Elijah Baily</h1>
+      <h1>Hey I'm an h1</h1>
       <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi impedit sapiente delectus molestias quia.</p>
       <img src="http://placehold.it/580x300" alt="">
       <callout class="primary">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam assumenda, praesentium qui vitae voluptate dolores. <a href="#">Click it!</a></p>
+        <p>^^^ This image will scale down even when browser is smaller than 580px wide</p>
       </callout>
       <h2>Title Ipsum <small>This is a note.</small></h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi repellat, harum. Quas nobis id aut, aspernatur, sequi tempora laborum corporis cum debitis, ullam, dolorem dolore quisquam aperiam! Accusantium, ullam, nesciunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus consequuntur commodi, aut sed, quas quam optio accusantium recusandae nesciunt, architecto veritatis. Voluptatibus sunt esse dolor ipsum voluptates, assumenda quisquam.</p>
@@ -139,25 +167,6 @@
 
     </columns>
   </row>
-  
-  <wrapper class="secondary">
-
-    <spacer size="16"></spacer>
-
-    <row>
-      <columns large="6">
-        <h5>Connect With Us:</h5>
-        <button class="facebook expand" href="#">Facebook</button>
-        <button class="twitter expand" href="#">Twitter</button>
-        <button class="google expand" href="#">Google+</button>
-      </columns>
-      <columns large="6">
-        <h5>Contact Info:</h5>
-        <p>Phone: 408-341-0600</p>
-        <p>Email: <a href="mailto:foundation@zurb.com">foundation@zurb.com</a></p>
-      </columns>
-    </row>
-  </wrapper>
       
   <center>
     <menu>
@@ -176,11 +185,13 @@
     <columns large="4">
       <center>
         <img src="http://placehold.it/125x200">
+        <p class="text-center note">large="4" (1/3)</p>
       </center>
     </columns>
     <columns large="8">
-      <h1>Do Something Radical With This App.</h1>
+      <h1>You can do 1/3 and 2/3 width!</h1>
       <button class="large" href="#">Sign Up</button>
+      <p class="text-center note">large="8" (2/3)</p>
     </columns>
   </row>
 
@@ -188,8 +199,7 @@
 
   <row>
     <columns>
-      <h3 class="text-center">It's Never Been Easier to Do Things.</h3>
-      <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur pariatur unde magni repudiandae totam, accusamus facere eligendi. Ad nobis eius porro saepe et ab, aliquid, sed mollitia cumque suscipit aperiam.</p>
+      <h3 class="text-center">More thirds!</h3>
     </columns>
   </row>
   <row>
@@ -197,21 +207,24 @@
       <center>
         <img src="http://placehold.it/50x50">
       </center>
-      <h5 class="text-center">Feature One</h5>
+      <h5 class="text-center">Item 1</h5>
+      <p class="text-center note">large="4" (1/3)</p>
       <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, quod quam unde earum.</p>
     </columns>
     <columns large="4">
       <center>
         <img src="http://placehold.it/50x50">
       </center>
-      <h5 class="text-center">Feature Two</h5>
+      <h5 class="text-center">Item 2</h5>
+      <p class="text-center note">large="4" (1/3)</p>
       <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, quod quam unde earum.</p>
     </columns>
     <columns large="4">
       <center>
         <img src="http://placehold.it/50x50">
       </center>
-      <h5 class="text-center">Feature Three</h5>
+      <h5 class="text-center">Item 3</h5>
+      <p class="text-center note">large="4" (1/3)</p>
       <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, quod quam unde earum.</p>
     </columns>
   </row>
@@ -232,14 +245,16 @@
     <columns>
       <spacer size="16"></spacer>
       <p class="text-center">&copy; copyright nobody<br/>
-      <a href="#">hello@nocopyright.com</a> | <a href="#">Manage Email Notifications</a> | <a href="#">Unsubscribe</a></p>
+      <a href="#">hello@agencychief.com</a> | <a href="#">Manage Email Notifications</a> | <a href="#">Unsubscribe</a></p>
       <center>
-        <menu>
-          <item><img src="http://placehold.it/25" alt=""></item>
-          <item><img src="http://placehold.it/25" alt=""></item>
-          <item><img src="http://placehold.it/25" alt=""></item>
-          <item><img src="http://placehold.it/25" alt=""></item>
-          <item><img src="http://placehold.it/25" alt=""></item>
+      <p class="note text-center">Easy way to shrink menu items - set a max-width on the table cells!<br><strong>.social-menu th {max-width: 45px;}</strong></p>
+        <menu class="social-menu">
+          <item><a href="http://www.facebook.com" target="_blank"><img src="../../assets/img/facebook.jpg" alt=""></a></item>
+          <item><a href="http://www.twitter.com" target="_blank"><img src="../../assets/img/twitter.jpg" alt=""></a></item>
+          <item><a href="http://www.pinterest.com" target="_blank"><img src="../../assets/img/pinterest.jpg" alt=""></a></item>
+          <item><a href="http://www.youtube.com" target="_blank"><img src="../../assets/img/youtube.jpg" alt=""></a></item>
+          <item><a href="http://www.instagram.com" target="_blank"><img src="../../assets/img/instagram.jpg" alt=""></a></item>
+          <item><a href="mailto:jon.nardini@agencychief.com" target="_blank"><img src="../../assets/img/email.jpg" alt=""></a></item>
         </menu>
       </center>
     </columns>
@@ -264,11 +279,13 @@
   </row>
   <row>
     <columns large="8">
+      <p class="note">large="8"</p>
       <h2>This is a title</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam at, nihil quas harum mollitia dolores odio. Inventore delectus nihil soluta quos, magni doloribus, voluptas aspernatur explicabo atque perspiciatis possimus voluptates.</p>
       <p><a href="#">Learn more</a></p>
     </columns>
     <columns large="4">
+      <p class="note">large="4"</p>
       <img class="small-float-center" src="http://placehold.it/170x129" alt="">
     </columns>
   </row>
@@ -361,40 +378,41 @@
           <columns large="6">
             <p>
               <strong>Payment Method</strong><br/>
-              Dubloons
+              Space Credits
             </p>
             <p>
               <strong>Email Address</strong><br/>
-              thecapn@pirates.org
+              captainkirk@starfleet.org
             </p>
             <p>
               <strong>Order ID</strong><br/>
-              239235983749636
+              8675309
             </p>
           </columns>
           <columns large="6">
             <p>
               <strong>Shipping Method</strong><br/>
-              Boat (1&ndash;2 weeks)<br/>
+              The Enterprise (1&ndash;2 weeks)<br/>
               <strong>Shipping Address</strong><br/>
-              Captain Price<br/>
+              Officer Riker<br/>
               123 Maple Rd<br/>
-              Campbell, CA 95112
+              Alaska, Earth 95112
             </p>
           </columns>
         </row>
       </callout>
 
       <h4>Order Details</h4>
+      <p class="text-center note">Normal tables also work fine! The following pricing guide uses a standard "table" tag wrapping table rows (tr) and table cells (th and td)</p>
 
       <table>
         <tr><th>Item</th><th>#</th><th>Price</th></tr>
-        <tr><td>Ship's Cannon</td><td>2</td><td>$100</td></tr>
-        <tr><td>Ship's Cannon</td><td>2</td><td>$100</td></tr>
-        <tr><td>Ship's Cannon</td><td>2</td><td>$100</td></tr>
+        <tr><td>Phaser</td><td>2</td><td>$100</td></tr>
+        <tr><td>Tricorder</td><td>2</td><td>$100</td></tr>
+        <tr><td>Diagnostic Wrap</td><td>1</td><td>$50</td></tr>
         <tr>
           <td colspan="2"><b>Subtotal:</b></td>
-          <td>$600</td>
+          <td>$450</td>
         </tr>
       </table>
 
@@ -426,16 +444,18 @@
 
 
 
+
+  <wrapper class="header">
+    <row>
+      <columns>
+
+        <spacer size="16"></spacer>
+        
+        <h4 class="text-center">Pirate Retirement Services</h4>
+      </columns>
+    </row>
+  </wrapper>
 <container>
-
-  <row class="header">
-    <columns>
-
-      <spacer size="16"></spacer>
-      
-      <h4 class="text-center">Pirate Retirement Services</h4>
-    </columns>
-  </row>
   <row>
     <columns>
 
@@ -465,84 +485,6 @@
 
 
 
-<wrapper class="header">
-  <container>
-    <row class="collapse">
-      <columns small="6">
-        <img src="http://placehold.it/200x50/663399">
-      </columns>
-      <columns small="6">
-        <p class="text-right">SIDEBAR HERO</p>
-      </columns>
-    </row>
-  </container>
-</wrapper>
-
-<container>
-
-  <spacer size="16"></spacer>
-
-  <row>
-    <columns>
-      <h1>Hi, Elijah Baily</h1>
-      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi impedit sapiente delectus molestias quia.</p>
-      <center>
-        <img src="http://placehold.it/570x300" alt="">
-      </center>
-      <callout class="primary">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam assumenda, praesentium qui vitae voluptate dolores. <a href="#">Click it!</a></p>
-      </callout>
-    </columns>
-  </row>
-  <row>
-    <columns large="7">
-      <h3>Hello, Han Fastolfe</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam nobis velit, aliquid pariatur at fugit. Omnis at quae, libero iusto quisquam animi blanditiis neque, alias minima corporis, ab in explicabo?</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime dignissimos voluptas minus, cupiditate voluptatem, voluptatum iste molestiae consectetur temporibus quae dolore nam possimus reprehenderit blanditiis laborum iusto sit. Perspiciatis, dolor.</p>
-      <callout class="secondary">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa quas optio totam quidem, placeat sunt, sit iusto fugit. Harum omnis deleniti enim nihil iure, quis laudantium veniam velit animi debitis. <a href="#">Click It!</a>
-      </callout>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores minus eius amet alias odit accusantium, fugit perspiciatis nulla suscipit nisi. Laborum aliquid, voluptatum consectetur fugiat maxime architecto enim molestias aperiam!</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex eveniet veritatis, magnam ipsam et vero necessitatibus. Deserunt facilis impedit, adipisci illo laboriosam assumenda fugiat dolorum nam odio aliquid, sit est.</p>
-      <button class="expand" href="#">Click Me!</button>
-    </columns>
-    <columns large="5" class="sidebar">
-      <callout class="secondary">
-        <h5>Header</h5>
-        <p class="lead">Sub-header</p>
-        <menu class="vertical">
-          <item href="#">Just a Plain Link &raquo;</item>
-          <item href="#">Just a Plain Link &raquo;</item>
-          <item href="#">Just a Plain Link &raquo;</item>
-          <item href="#">Just a Plain Link &raquo;</item>
-          <item href="#">Just a Plain Link &raquo;</item>
-          <item href="#">Just a Plain Link &raquo;</item>
-          <item href="#">Just a Plain Link &raquo;</item>
-        </menu>
-      </callout>
-      <callout class="secondary">
-        <h6>CONNECT WITH US:</h6>
-        <button class="facebook expand" href="#">Facebook</button>
-        <button class="twitter expand" href="#">Twitter</button>
-        <button class="google expand" href="#">Google+</button>
-        <p>CONTACT INFO:</p>
-        <p>Phone: 408-341-0600</p>
-        <p>Email: <a href="mailto:foundation@zurb.com">foundation@zurb.com</a></p>
-      </callout>
-    </columns>
-  </row>
-  
-  <center>
-    <menu>
-      <item href="#">Terms</item>
-      <item href="#">Privacy</item>
-      <item href="#">Unsubscribe</item>
-    </menu>
-  </center>
-
-</container>
-
-
 
 <wrapper class="header">
   <container>
@@ -551,7 +493,7 @@
         <img src="http://placehold.it/200x50/663399">
       </columns>
       <columns small="6">
-        <p class="text-right">SIDEBAR</p>
+        <p class="text-right">SIDEBAR EXAMPLE</p>
       </columns>
     </row>
   </container>
@@ -563,7 +505,8 @@
 
   <row>
     <columns large="7">
-      <h2>Hello, Han Fastolfe</h2>
+      <h2>7/12 and 5/12 width? WHAT IS THIS MADNESS?</h2>
+      <p class="note text-center">large="7"</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam nobis velit, aliquid pariatur at fugit. Omnis at quae, libero iusto quisquam animi blanditiis neque, alias minima corporis, ab in explicabo?</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime dignissimos voluptas minus, cupiditate voluptatem, voluptatum iste molestiae consectetur temporibus quae dolore nam possimus reprehenderit blanditiis laborum iusto sit. Perspiciatis, dolor.</p>
       <callout class="secondary">
@@ -575,26 +518,27 @@
     </columns>
     <columns large="5" class="sidebar">
       <callout class="secondary">
-        <h5>Header</h5>
-        <p class="lead">Sub-header</p>
+        <h5>Sidebar Stuff</h5>
+        <p class="note text-center">large="5"</p>
         <menu class="vertical">
-          <item href="#">Just a Plain Link &raquo;</item>
-          <item href="#">Just a Plain Link &raquo;</item>
-          <item href="#">Just a Plain Link &raquo;</item>
-          <item href="#">Just a Plain Link &raquo;</item>
-          <item href="#">Just a Plain Link &raquo;</item>
-          <item href="#">Just a Plain Link &raquo;</item>
-          <item href="#">Just a Plain Link &raquo;</item>
+          <item href="#">Link &raquo;</item>
+          <item href="#">Link &raquo;</item>
+          <item href="#">Link &raquo;</item>
+          <item href="#">Link &raquo;</item>
+          <item href="#">Link &raquo;</item>
+          <item href="#">Link &raquo;</item>
+          <item href="#">Link &raquo;</item>
         </menu>
       </callout>
       <callout class="secondary">
         <h6>CONNECT WITH US:</h6>
+        <p class="note">These are <strong>button</strong> elements.<br>Facebook and Google buttons have the class <strong>.expand</strong> (making them full width of their container), but the Twitter button does not</p>
         <button class="facebook expand" href="#">Facebook</button>
-        <button class="twitter expand" href="#">Twitter</button>
+        <button class="twitter" href="#">Twitter</button>
         <button class="google expand" href="#">Google+</button>
         <p>CONTACT INFO:</p>
-        <p>Phone: 408-341-0600</p>
-        <p>Email: <a href="mailto:foundation@zurb.com">foundation@zurb.com</a></p>
+        <p>Phone: 408-555-0600</p>
+        <p>Email: <a href="mailto:jon.nardini@agencychief.com">jon.nardini@agencychief.com</a></p>
       </callout>
     </columns>
   </row>
@@ -617,13 +561,13 @@
 <container class="header">
   <row>
     <columns>
-      <h1 class="text-center">Welcome to Kraken Academy</h1>
+      <h1 class="text-center">Welcome to Agency Chief</h1>
 
       <center>
         <menu class="text-center">
           <item href="#">About</item>
-          <item href="#">Course List</item>
-          <item href="#">Campus Map</item>
+          <item href="#">Clients</item>
+          <item href="#">Team</item>
           <item href="#">Contact</item>
         </menu>
       </center>
@@ -644,12 +588,13 @@
 
       <spacer size="16"></spacer>
 
-      <h4>An exciting future of terrorizing sailors awaits you at Kraken Academy.</h4>
+      <h4>An exciting future of web development awaits you at Agency Chief.</h4>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque culpa vel architecto, perspiciatis eius cum autem quidem, sunt consequuntur, impedit dolor vitae illum nobis sint nihil aliquid? Assumenda, amet, officia.</p>
 
       <center>
+      <p class="text-center note">You can also use "item" tags wrapped in a "menu" tag for spaced-out and centered links! See above and below.</p>
         <menu>
-          <item href="#">krakenacademy.com</item>
+          <item href="#">agencychief.com</item>
           <item href="#">Facebook</item>
           <item href="#">Twitter</item>
           <item href="#">(408)-555-0123</item>
